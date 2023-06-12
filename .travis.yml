@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 13
+  - 16
 
 services:
   - docker
@@ -18,7 +18,7 @@ script:
   - docker build -t udagram-reverseproxy ./udagram-reverse-proxy
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker built -t udagram-api-user ./udagram-api-user
-  - docker built -t udagram-frontend ./udagram-front-end
+  - docker built -t udagram-frontend ./udagram-frontend
   # Tagging
   - docker tag udagram-reverseproxy hiepdangbackup/udagram-reverse-proxy:v4a
   - docker tag udagram-api-feed hiepdangbackup/udagram-api-feed:v4a
