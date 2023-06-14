@@ -28,7 +28,7 @@ script:
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push hiepdangbackup/udagram-reverseproxy:v4a
   - docker push hiepdangbackup/udagram-api-feed:v4a
   - docker push hiepdangbackup/udagram-api-user:v4a
   - docker push hiepdangbackup/udagram-frontend:local
-  - docker push hiepdangbackup/udagram-reverseproxy:v4a
