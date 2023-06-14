@@ -15,12 +15,12 @@ before_script:
 
 script:
   - docker --version # print the version for logging here.
-  - docker build -t udagram-reverseproxy ./udagram-reverse-proxy
+  - docker build -t udagram-reverseproxy ./udagram-reverseproxy
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker built -t udagram-api-user ./udagram-api-user
   - docker built -t udagram-frontend ./udagram-frontend
   # Tagging
-  - docker tag udagram-reverseproxy hiepdangbackup/udagram-reverse-proxy:v4a
+  - docker tag udagram-reverseproxy hiepdangbackup/udagram-reverseproxy:v4a
   - docker tag udagram-api-feed hiepdangbackup/udagram-api-feed:v4a
   - docker tag udagram-api-user hiepdangbackup/udagram-api-user:v4a
   - docker tag udagram-frontend hiepdangbackup/udagram-frontend:local
@@ -31,4 +31,4 @@ after_success:
   - docker push hiepdangbackup/udagram-api-feed:v4a
   - docker push hiepdangbackup/udagram-api-user:v4a
   - docker push hiepdangbackup/udagram-frontend:local
-  - docker push hiepdangbackup/reverseproxy:v4a
+  - docker push hiepdangbackup/udagram-reverseproxy:v4a
