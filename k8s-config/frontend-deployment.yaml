@@ -17,7 +17,7 @@ spec:
         api: external
     spec:
       containers:
-        - image: hiepdangbackup/udagram-frontend:v1
+        - image: hiepdangbackup/udagram-frontend:v1local
           name: frontend
           imagePullPolicy: Always
           ports:

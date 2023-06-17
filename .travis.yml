@@ -23,7 +23,7 @@ script:
   - docker tag udagram-reverseproxy hiepdangbackup/udagram-reverseproxy:v1
   - docker tag udagram-api-feed hiepdangbackup/udagram-api-feed:v1
   - docker tag udagram-api-user hiepdangbackup/udagram-api-user:v1
-  - docker tag udagram-frontend hiepdangbackup/udagram-frontend:v1
+  - docker tag udagram-frontend hiepdangbackup/udagram-frontend:v1local
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you
 after_success:
@@ -31,4 +31,4 @@ after_success:
   - docker push hiepdangbackup/udagram-reverseproxy:v1
   - docker push hiepdangbackup/udagram-api-feed:v1
   - docker push hiepdangbackup/udagram-api-user:v1
-  - docker push hiepdangbackup/udagram-frontend:v1
+  - docker push hiepdangbackup/udagram-frontend:v1local
